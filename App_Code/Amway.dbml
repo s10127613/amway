@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Amway" Class="AmwayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-SHIHWEI\SQLEXPRESS;Initial Catalog=Amway;Integrated Security=True;Persist Security Info=True;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AmwayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Address" Member="Address">
+    <Type Name="Address">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZipNum" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemUser_Role" Member="SystemUser_Role">
+    <Type Name="SystemUser_Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Role_SystemUser_Role" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" />
+      <Association Name="SystemUser_SystemUser_Role" Member="SystemUser" ThisKey="SystemUserID" OtherKey="ID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackendMenu" Member="BackendMenu">
+    <Type Name="BackendMenu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BackendMenu_BackendMenuPrivilege" Member="BackendMenuPrivilege" ThisKey="ID" OtherKey="BackendMenuID" Type="BackendMenuPrivilege" />
+      <Association Name="BackendMenu_Role_BackendMenu" Member="Role_BackendMenu" ThisKey="ID" OtherKey="BackendMenuID" Type="Role_BackendMenu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackendMenuPrivilege" Member="BackendMenuPrivilege">
+    <Type Name="BackendMenuPrivilege">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BackendMenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BackendMenuPrivilege_Role_BackendPrivilege" Member="Role_BackendPrivilege" ThisKey="ID" OtherKey="BackendMenuPrvilegeID" Type="Role_BackendPrivilege" />
+      <Association Name="BackendMenu_BackendMenuPrivilege" Member="BackendMenu" ThisKey="BackendMenuID" OtherKey="ID" Type="BackendMenu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customer">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="No" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Add1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Add2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Add3" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Add4" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Invoice" Member="Invoice" ThisKey="ID" OtherKey="CustomerID" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoice_Item" Member="Invoice_Item">
+    <Type Name="Invoice_Item">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitCost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Invoice_Invoice_Item" Member="Invoice" ThisKey="InvoiceID" OtherKey="ID" Type="Invoice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Role">
+    <Type Name="Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Role_SystemUser_Role" Member="SystemUser_Role" ThisKey="ID" OtherKey="RoleID" Type="SystemUser_Role" />
+      <Association Name="Role_Role_BackendMenu" Member="Role_BackendMenu" ThisKey="ID" OtherKey="RoleID" Type="Role_BackendMenu" />
+      <Association Name="Role_Role_BackendPrivilege" Member="Role_BackendPrivilege" ThisKey="ID" OtherKey="RoleID" Type="Role_BackendPrivilege" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role_BackendMenu" Member="Role_BackendMenu">
+    <Type Name="Role_BackendMenu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BackendMenuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BackendMenu_Role_BackendMenu" Member="BackendMenu" ThisKey="BackendMenuID" OtherKey="ID" Type="BackendMenu" IsForeignKey="true" />
+      <Association Name="Role_Role_BackendMenu" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role_BackendPrivilege" Member="Role_BackendPrivilege">
+    <Type Name="Role_BackendPrivilege">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BackendMenuPrvilegeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BackendMenuPrivilege_Role_BackendPrivilege" Member="BackendMenuPrivilege" ThisKey="BackendMenuPrvilegeID" OtherKey="ID" Type="BackendMenuPrivilege" IsForeignKey="true" />
+      <Association Name="Role_Role_BackendPrivilege" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemLog" Member="SystemLog">
+    <Type Name="SystemLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SystemUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemPosition" Member="SystemPosition">
+    <Type Name="SystemPosition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SystemPosition_SystemUser" Member="SystemUser" ThisKey="ID" OtherKey="PositionID" Type="SystemUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemUser" Member="SystemUser">
+    <Type Name="SystemUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PositionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="NVarChar(225) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(225) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(225) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginApp" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SystemUser_SystemUser_Role" Member="SystemUser_Role" ThisKey="ID" OtherKey="SystemUserID" Type="SystemUser_Role" />
+      <Association Name="SystemPosition_SystemUser" Member="SystemPosition" ThisKey="PositionID" OtherKey="ID" Type="SystemPosition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoice" Member="Invoice">
+    <Type Name="Invoice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="No" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Del" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Invoice_Invoice_Item" Member="Invoice_Item" ThisKey="ID" OtherKey="InvoiceID" Type="Invoice_Item" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerID" OtherKey="ID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

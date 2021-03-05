@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 17" name="Amway">
+  <DataContextMoniker Name="/AmwayDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dbad2cb1-dd58-41df-97df-7391820e1a9b" absoluteBounds="6.75, 8.875, 2, 1.7220992024739559">
+      <DataClassMoniker Name="/AmwayDataContext/Address" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c638fd6-6f65-4638-a821-be31832c9814" absoluteBounds="6.765, 9.335, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00fc4a68-70ae-490a-b668-64fcb725d355" absoluteBounds="3.5, 5.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/AmwayDataContext/SystemUser_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbe7c8dd-01eb-4d58-b8a3-d1ad847086ee" absoluteBounds="3.515, 5.96, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="433d7b68-196a-4c71-b95b-a6a7d4906a11" absoluteBounds="1.5, 11.875, 2, 2.2764815266927094">
+      <DataClassMoniker Name="/AmwayDataContext/BackendMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3155588-7198-4706-9389-2a865e75de18" absoluteBounds="1.5150000000000001, 12.335, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="437c8562-bf67-4001-8b4a-f9ce9d150d86" absoluteBounds="0.75, 9.125, 2, 1.9068933105468755">
+      <DataClassMoniker Name="/AmwayDataContext/BackendMenuPrivilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="559dd0f0-9d97-42ce-b25b-d0db04ba746d" absoluteBounds="0.765, 9.585, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7bb7a7d-2f28-4d9c-9f87-31f7357547ce" absoluteBounds="6.75, 3.25, 2, 4.6788049316406255">
+      <DataClassMoniker Name="/AmwayDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa77aac2-6ba8-4f37-82ac-e4b2bf377ed6" absoluteBounds="6.765, 3.71, 1.9700000000000002, 4.118804931640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e40336b1-6e5f-4100-aad2-94961eabc69f" absoluteBounds="12.25, 4.625, 2, 1.9068933105468755">
+      <DataClassMoniker Name="/AmwayDataContext/Invoice_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34f11da5-59e1-4071-b870-cbeb6804f3e5" absoluteBounds="12.265, 5.085, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9162d93e-bfca-4d03-b7cc-e0e8b4811db0" absoluteBounds="0.75, 5, 2, 2.4612756347656255">
+      <DataClassMoniker Name="/AmwayDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89d29d40-9a78-4316-a827-50984d69df2e" absoluteBounds="0.765, 5.46, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3f18e26-4467-4fd1-b040-b125ea31cea2" absoluteBounds="3.5, 8.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/AmwayDataContext/Role_BackendMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d94a693-a265-4c74-a105-fe5d4d76d84c" absoluteBounds="3.515, 8.96, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42fafaf4-3eec-428c-a398-011905ae1cff" absoluteBounds="3.5, 2.625, 2, 1.3525109863281255">
+      <DataClassMoniker Name="/AmwayDataContext/Role_BackendPrivilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b1d3be8-43d8-49c5-b637-d6b435fc768e" absoluteBounds="3.515, 3.085, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b2d25c9-cb96-44da-a6d0-bc0f2407b878" absoluteBounds="4.75, 11.875, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/AmwayDataContext/SystemLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="085c121f-b2c9-44cb-83d6-b0896e298a9d" absoluteBounds="4.765, 12.335, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4cbdbec-1e6d-4eb7-bea9-a47f51be8740" absoluteBounds="1.5, 15.375, 2, 1.3525109863281237">
+      <DataClassMoniker Name="/AmwayDataContext/SystemPosition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2d58ddc-090c-4097-99f3-c5d2c64acd6b" absoluteBounds="1.5150000000000001, 15.835, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8d9d91f-ebf5-4891-8932-442de1431081" absoluteBounds="0.75, 0.75, 2, 3.0156579589843773">
+      <DataClassMoniker Name="/AmwayDataContext/SystemUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="299eae62-26e9-4018-9e6e-74e85822af28" absoluteBounds="0.765, 1.2100000000000009, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 11.875); (2.125 : 11.0318933105469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/BackendMenu/BackendMenu_BackendMenuPrivilege" />
+      <nodes>
+        <classShapeMoniker Id="433d7b68-196a-4c71-b95b-a6a7d4906a11" />
+        <classShapeMoniker Id="437c8562-bf67-4001-8b4a-f9ce9d150d86" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.26865254720052); (3.10416666666667 : 6.26865254720052 : JumpStart); (3.27083333333333 : 6.26865254720052 : JumpEnd); (3.5 : 6.26865254720052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/Role/Role_SystemUser_Role" />
+      <nodes>
+        <classShapeMoniker Id="9162d93e-bfca-4d03-b7cc-e0e8b4811db0" />
+        <classShapeMoniker Id="00fc4a68-70ae-490a-b668-64fcb725d355" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 11.875); (3.125 : 8.78125); (3.22916666666667 : 8.78125 : JumpStart); (3.39583333333333 : 8.78125 : JumpEnd); (3.5 : 8.78125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/BackendMenu/BackendMenu_Role_BackendMenu" />
+      <nodes>
+        <classShapeMoniker Id="433d7b68-196a-4c71-b95b-a6a7d4906a11" />
+        <classShapeMoniker Id="a3f18e26-4467-4fd1-b040-b125ea31cea2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.39973617322716); (3.12857443490112 : 7.77831060812828 : JumpStart); (3.24642556509888 : 7.89616173832604 : JumpEnd); (3.3125 : 7.96223617322716); (3.3125 : 9.44052954720052); (3.5 : 9.44052954720052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/Role/Role_Role_BackendMenu" />
+      <nodes>
+        <classShapeMoniker Id="9162d93e-bfca-4d03-b7cc-e0e8b4811db0" />
+        <classShapeMoniker Id="a3f18e26-4467-4fd1-b040-b125ea31cea2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.18660632234075); (3.1875 : 8.74910632234075); (3.1875 : 3.30125549316406); (3.5 : 3.30125549316406)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AmwayDataContext/BackendMenuPrivilege/BackendMenuPrivilege_Role_BackendPrivilege" />
+      <nodes>
+        <classShapeMoniker Id="437c8562-bf67-4001-8b4a-f9ce9d150d86" />
+        <classShapeMoniker Id="42fafaf4-3eec-428c-a398-011905ae1cff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.00153746153846); (3.06607443490112 : 4.68546302663734 : JumpStart); (3.24642556509888 : 4.50511189643958 : JumpEnd); (3.375 : 4.37653746153846); (3.375 : 3.30125549316406); (3.5 : 3.30125549316406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/Role/Role_Role_BackendPrivilege" />
+      <nodes>
+        <classShapeMoniker Id="9162d93e-bfca-4d03-b7cc-e0e8b4811db0" />
+        <classShapeMoniker Id="42fafaf4-3eec-428c-a398-011905ae1cff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.76565795898438); (3.125 : 4.14065795898438); (3.125 : 5.85307427360026); (3.5 : 5.85307427360026)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/SystemUser/SystemUser_SystemUser_Role" />
+      <nodes>
+        <classShapeMoniker Id="b8d9d91f-ebf5-4891-8932-442de1431081" />
+        <classShapeMoniker Id="00fc4a68-70ae-490a-b668-64fcb725d355" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 15.375); (1.125 : 15); (0.375 : 15); (0.375 : 4.14065795898438); (0.75 : 3.76565795898438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmwayDataContext/SystemPosition/SystemPosition_SystemUser" />
+      <nodes>
+        <classShapeMoniker Id="e4cbdbec-1e6d-4eb7-bea9-a47f51be8740" />
+        <classShapeMoniker Id="b8d9d91f-ebf5-4891-8932-442de1431081" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="801a3835-0d66-46c3-8822-0f6ebcad4a14" absoluteBounds="9.75, 4.375, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/AmwayDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6a96966-fd99-4529-a156-bddd2295803e" absoluteBounds="9.765, 4.835, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.75 : 5.57844665527344); (12.25 : 5.57844665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AmwayDataContext/Invoice/Invoice_Invoice_Item" />
+      <nodes>
+        <classShapeMoniker Id="801a3835-0d66-46c3-8822-0f6ebcad4a14" />
+        <classShapeMoniker Id="e40336b1-6e5f-4100-aad2-94961eabc69f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 5.60563781738281); (9.75 : 5.60563781738281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AmwayDataContext/Customer/Customer_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="f7bb7a7d-2f28-4d9c-9f87-31f7357547ce" />
+        <classShapeMoniker Id="801a3835-0d66-46c3-8822-0f6ebcad4a14" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
